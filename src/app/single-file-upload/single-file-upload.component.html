@@ -1,0 +1,25 @@
+<!-- src/app/single-file-upload/single-file-upload.component.html -->
+
+<h3>Single File Upload</h3>
+<div class="input-container">
+  <label for="single-file-input" class="input-label">
+    <span class="input-icon">
+      <i class="material-icons">cloud_upload</i>
+    </span>
+    <span class="input-text">Choose a file</span>
+  </label>
+  <input
+    type="file"
+    id="single-file-input"
+    class="input-file"
+    (change)="onFileSelected($event)"
+  />
+</div>
+<div class="preview-container">
+  <img *ngIf="previewUrl" [src]="previewUrl" alt="File Preview" class="preview-image" />
+</div>
+<mat-progress-bar *ngIf="uploadProgress" [value]="uploadProgress"></mat-progress-bar>
+<div *ngIf="message" [ngClass]="{ 'success-message': isSuccess, 'failure-message': !isSuccess }">
+  {{ message }}
+</div>
+<button class="upload-button" (click)="onUpload()" [disabled]="!selectedFile">Upload</button>

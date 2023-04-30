@@ -1,27 +1,57 @@
-# AngularNodejsFileUpload
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+# Angular File Upload Example
 
-## Development server
+This is a simple Angular application with a Node.js (Express) backend using MySQL for file storage. The app allows users to upload files, displays a progress bar during the upload process, and shows the uploaded file after completion. The app also includes notifications for success or failure.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+To get started, clone this repository and install the dependencies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+git clone https://github.com/your-username/angular-nodejs-file-upload.git
+cd angular-nodejs-file-upload
+npm install
+```
 
-## Build
+## Running the App
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run the app, you need to start both the Angular app and the Node.js server.
 
-## Running unit tests
+### Angular App
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To start the Angular app, run:
 
-## Running end-to-end tests
+```bash
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The app will be available at `http://localhost:4200`.
 
-## Further help
+### Node.js Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To start the Node.js server, navigate to the `server` folder and run:
+
+```bash
+node app.js
+```
+
+The server will be available at `http://localhost:3000`.
+
+## Usage
+
+To use the app, simply select a file using the file input field and click the "Upload" button. The app will display a progress bar during the upload process and show the uploaded file after completion. If the upload fails, the app will display a notification.
+
+## Dependencies
+
+The app uses the following dependencies:
+
+- Angular
+- Angular Material
+- Express
+- Multer
+- MySQL2
+- Sequelize
+
+## License
+
+This app is licensed under the MIT License. See the `LICENSE` file for details.

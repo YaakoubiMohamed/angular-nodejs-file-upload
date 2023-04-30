@@ -1,0 +1,34 @@
+
+<h3>Multiple File Upload</h3>
+<div class="input-container">
+  <label for="multiple-file-input" class="input-label">
+    <span class="input-icon">
+      <i class="material-icons">cloud_upload</i>
+    </span>
+    <span class="input-text">Choose files</span>
+  </label>
+  <input
+    type="file"
+    id="multiple-file-input"
+    class="input-file"
+    multiple
+    (change)="onFilesSelected($event)"
+  />
+</div>
+  <div class="preview-image-container" *ngFor="let previewUrl of previewUrls">
+    <img [src]="previewUrl" alt="File Preview" width="200" class="preview-image"/>
+  </div>
+<mat-progress-bar
+  *ngIf="uploadProgress"
+  [value]="uploadProgress"
+></mat-progress-bar>
+<div *ngIf="message" [ngClass]="{ 'success-message': isSuccess, 'failure-message': !isSuccess }">
+  {{ message }}
+</div>
+<button
+  class="upload-button"
+  (click)="onUpload()"
+  [disabled]="!selectedFiles || selectedFiles.length === 0"
+>
+  Upload
+</button>

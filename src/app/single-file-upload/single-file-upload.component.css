@@ -1,0 +1,53 @@
+
+.input-container {
+  display: flex;
+  }
+  
+  .input-label {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .input-label:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .input-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .input-text {
+    font-size: 1rem;
+  }
+  
+  .input-file {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  
+  .preview-container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: 200px;
+    max-width: 400px;
+  }
+  
+  .upload-button {
+    margin-top: 1rem;
+    width: 30%;
+    height: 40px;
+    background-color: #a881af;
+  }
+  
